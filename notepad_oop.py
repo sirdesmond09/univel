@@ -17,7 +17,7 @@ class Notepad():
     def view(self, username, note, notepads):
         account = {f"{self.username}": notepads}
         print("Here's a list of your notepads below")
-        for i in account[notepads] :
+        for i in account[f'{self.username}'] :
             print(i)
 
         note2read = input("Select a note to read\n> ").lower()
@@ -29,6 +29,11 @@ class Notepad():
             print("Note does not exist!")
 
     def edit(self, notepads):
+        account = {f"{self.username}": notepads}
+        print("Here's a list of your notepads below")
+        for i in account[f'{self.username}'] :
+            print(i)
+
         note2edit = input("Select a note to edit\n> ").lower()
 
         if note2edit in notepads:
@@ -54,7 +59,7 @@ while True:
     if len(names) >=1:
         login = input('Enter your username to login: ').lower()
         if login in names:
-            logged_in = (Notepad(username= user))
+            logged_in = (Notepad(username= user)) 
 
             if len(notepads) == 0:
                 print(f'welcome {logged_in.username}!')
@@ -68,7 +73,6 @@ while True:
                 if do_you == 'y':
                     view = input("Do you want to view or edit your notepads?view/edit\n> ").lower()
                     if view == 'view':
-
                         logged_in.view(username= user, note= name_of_notepad, notepads= notepads)
                     if view == 'edit':
                         logged_in.edit(notepads= notepads)
