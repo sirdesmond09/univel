@@ -4,7 +4,8 @@ class AccountHolder():
         self.name = name
         self.balance = bal
 
-    def cash_deposit(self, money):
+    def cash_deposit(self):
+        money = float(input("Enter amount to deposit\n> $"))
         self.balance = money + self.balance
         print(f"Your account has been credited with ${money}\nCurrent balance is ${self.balance}")
 
@@ -46,9 +47,9 @@ class AccountHolder():
 
 print("Welcome to Our BANK")
 print("Create an account below")
-name = input("Enter your account name")
+name = input("Enter your account name\n> ")
 newaccount = AccountHolder(name= name)
-newaccount.cash_deposit(154340)
+newaccount.cash_deposit()
 newaccount.cash_withdraw()
 newaccount.transfer()
 newaccount.check_balance()
