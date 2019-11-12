@@ -48,7 +48,7 @@ class Bank():
 print("Welcome to Our BANK")
 print("Create an account below")
 name = input("Enter your account name\n> ")
-newaccount = AccountHolder(name= name)
+newaccount = Bank(name= name)
 newaccount.cash_deposit()
 newaccount.cash_withdraw()
 newaccount.transfer()
