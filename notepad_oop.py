@@ -37,7 +37,7 @@ class Notepad():
         note2edit = input("Select a note to edit\n> ").lower()
 
         if note2edit in notepads:
-            fh      = open(f"{self.note}.txt", 'a')
+            fh      = open(f"{self.note}.txt", 'a') 
             content = input('Add some more contents below:\n> ')
             fh.write(content)
             fh.close()
