@@ -28,7 +28,7 @@ class Bank():
     def check_balance(self):
         print(f'Your  current balance is ${self.balance}')
 
-    def transfer(self):
+    def transfer(self, ):
         money = float(input("Enter amount to transfer\n$" ))
         if money > self.balance:
             print("Insufficient Funds")
